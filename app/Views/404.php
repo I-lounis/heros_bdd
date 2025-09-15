@@ -1,5 +1,5 @@
 <?php
-    require_once(__DIR__ . 'partials/head.php');
+    require_once(__DIR__ . '/partials/head.php');
 ?>
 
 <h1>Page non trouvé !</h1>
