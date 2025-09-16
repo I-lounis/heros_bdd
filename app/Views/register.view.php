@@ -1,27 +1,45 @@
 <?php 
 require_once(__DIR__ . '/partials/head.php');
 ?>
-
-<h1 class = "text-center mb-5">Formulaire d'inscription</h1>
-
-<div class = "d-flex justify-content-center">
-    <form action = "" method = "">
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+<h1>Inscription</h1>
+<form method="POST">
+    <div class="container">
+        <div class="form-group">
+            <label for="pseudo" class="form-label">Donne moi ton pseudo :</label>
+            <input type="text" name="pseudo" id="pseudo" placeholder="Bidule" class="form-control">
+            <?php 
+            if(isset($arrayError['pseudo'])){
+                ?>
+                    <p class="text-danger"><?= $arrayError['pseudo']?></p>
+                <?php
+            }
+            ?>
+        </div>
+        <div class="form-group">
+            <label for="email" class="form-label">Donne moi ton email :</label>
+            <input type="email" name="email" id="email" placeholder="Bidule@gmail.com" class="form-control">
+            <?php 
+            if(isset($arrayError['email'])){
+                ?>
+                    <p class="text-danger"><?= $arrayError['email']?></p>
+                <?php
+            }
+            ?>
+        </div>
+        <div class="form-group">
+            <label for="password" class="form-label">Donne moi ton mot de pase :</label>
+            <input type="password" name="password" id="password" class="form-control">
+            <?php 
+            if(isset($arrayError['password'])){
+                ?>
+                    <p class="text-danger"><?= $arrayError['password']?></p>
+                <?php
+            }
+            ?>
+        </div>
+        <button type="submit" class="btn btn-success mt-5">Inscription</button>
     </div>
-        <div class="mb-3">
-        <label for="exampleInputpseudo" class="form-label">Pseudo</label>
-        <input type="" class="form-control" id="exampleInput">
-    </div>
-    <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-</div>
+</form>
 
 <?php 
 require_once(__DIR__ . '/partials/footer.php');
