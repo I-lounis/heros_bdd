@@ -1,5 +1,5 @@
 <?php 
-require_once(__DIR__ . '/partials/head.php');
+    require_once(__DIR__ . '/partials/head.php');
 ?>
  <h1>Les heros les plus fun !</h1>
     <div class="container-fluid my-5">
@@ -25,5 +25,5 @@ require_once(__DIR__ . '/partials/head.php');
     </div>
 
 <?php 
-require_once(__DIR__ . '/partials/footer.php');
+    require_once(__DIR__ . '/partials/footer.php');
 ?>
